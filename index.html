@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,9 +27,7 @@
       <div class="contenedor-navegacion">
         <div class="contenido-navegacion contenedor">
           <div class="logo">
-            <h2>
-              Anbernic
-            </h2>
+            <h2>Anbernic</h2>
           </div>
           <nav class="navegacion ocultar">
             <a href="#">Inicio</a>
@@ -42,9 +43,96 @@
 
     <section>
       <!--GD-->
-    </section>
-    <section>
-      <!---->
+    </section>    
+    <div class="separador">
+      <div class="contenido-separador contenedor">
+        
+          <h2>Retro square-screen design</h2>
+          <p>Anbernic RG CubeXX is a high-cost-performance retro square-screen handheld console.</p>
+          <button>SHOP</button>                
+      </div>
+  </div>
+
+  <section class="retro contenedor">       
+          <div class="texto-retro">
+            <h2>Retro square-screen design</h2>
+              <h3>Retro square-screen, Linux 64-bit system and equipped with RGB lighting effects to bring you a cool gaming experience!
+              </h3>
+              <p>Anbernic RG CubeXX is a high-cost-performance retro square-screen handheld console, featuring a 3.95-inch IPS fully laminated display with a resolution of 720x720. Its 1:1 aspect ratio ensures excellent compatibility with various emulators, including vertical arcade games and other 30+ gaming platforms. The overall design of the device is elegant, with a reasonable button layout and comfortable grip and feel.</p>     
+          </div>
+          <figure class="imagen-retro">
+              <img src="/assets/img/RG_CUBEXX3_8a1322c7-8e43-491b-a863-c448f3504e2c.webp" alt="Consola">
+          </figure>
+      
+  </section>
+
+ 
+
+  <div class="formulario-contacto contenedor">
+
+      <div class="informacion-contacto">
+          <h3>Contact us</h3>        
+          <div class="redes-sociales">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-instagram"></i>
+          </div>
+      </div>
+
+      <form class="formulario">
+          <div class="input-formulario">
+              <label for="nombre">Name</label>
+              <input type="text" placeholder="Ethan" id="nombre">
+          </div>
+          <div class="input-formulario">
+              <label for="apellidos">Surname</label>
+              <input type="text" placeholder="Smith" id="apellidos">
+          </div>
+          <div class="input-formulario">
+              <label for="correo">E-mail</label>
+              <input type="email" placeholder="ejemplo@ejemplo.com" id="correo">
+          </div>
+          <div class="input-formulario">
+              <label for="telefono">Phone number</label>
+              <input type="tel" placeholder="784 785 7458 7458" id="telefono">
+          </div>
+          <div class="input-formulario">
+              <label for="mensaje">Message</label>
+              <textarea></textarea>
+          </div>
+          <div class="btn-formulario">
+              <input type="submit" class="btn btn-danger btn-lg" value="Send">
+          </div>
+          
+      </form>
+  </div>
+  <div class="pie-pagina ">
+      <div class="contenedor-piepagina contenedor">
+          <div class="info">
+            <figure class="logo-piePagina">
+            <img src="assets/img/Anbernic_logo.png" alt="">
+          </figure>
+            <div class="redes-sociales redes-pie">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-instagram"></i>
+          </div>
+          </div>
+          <div class="info">
+              <h3>OUR STORY</h3>
+              <p>Anbernic's mission is to provide best-in-class handheld gaming consoles and peripherals to players and open-source developers around the world. Since 2017, our company has built an excellent reputation with our global partners and customers. We are driven to innovate and move the gaming market forward by continuing to build high-quality products.</p>             
+          </div>         
+          <div class="info">            
+              <h3>SING UP</h3>
+              <p>Sign up for new stories and personal offers</p>
+              <input type="email" placeholder="Tu correo">
+              <input type="submit" class="btn btn-danger btn-lg" value="Suscribirse">
+          </div>
+      </div>
+  </div>
+  <footer class="footer">
+      <p>© 2024, Anbernic.</p>
+  </footer>
     </section>
     <script src="./assets/js/main.js"></script>
     <script
@@ -52,5 +140,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://kit.fontawesome.com/4a9599b20b.js" crossorigin="anonymous"></script>
   </body>
 </html>
