@@ -313,6 +313,20 @@ a {
   margin-top: 1rem;
 }
 
+/*Cambio de color para alerta*/
+.swal2-confirm {
+  background-color: #d23232;
+  color: white;
+  font-family: "Roboto", serif !important;
+}
+
+/*Cambia tipografia*/
+.subscribeMessage {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*Pie de pagina*/
 
 .pie-pagina {

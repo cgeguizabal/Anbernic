@@ -28,4 +28,27 @@ const botonCerrar = () => {
 
 //GG
 
-//Guillermo
+//Activa boton send del formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("send");
+  button.addEventListener("click", () => {
+    Swal.fire("You're message was sent successfully");
+  });
+});
+
+//Activa boton subscribe
+document.addEventListener("DOMContentLoaded", () => {
+  const subsButton = document.getElementById("Subscribe");
+  subsButton.addEventListener("click", () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "You have been subscribed",
+      showConfirmButton: false,
+      timer: 1900,
+      customClass: {
+        tittle: "subscribeMessage",
+      },
+    });
+  });
+});
