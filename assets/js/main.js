@@ -26,8 +26,6 @@ const botonCerrar = () => {
   navegacion.appendChild(btnCerrar);
 };
 
-//GG
-
 //Activa boton send del formulario
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("send");
