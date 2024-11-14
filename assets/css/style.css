@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Kumbh+Sans:wght@200;300&family=Roboto:ital,wght@0,500;1,300;1,400;1,500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@
   --oscuro: #000;
   --titulos: "Arima Madurai", cursive;
   --parrafos: "Mulish", sans-serif;
+  --rojo-intenso: #d23232;
 }
 
 html {
@@ -19,9 +21,9 @@ html {
 }
 body {
   font-size: 1.6rem;
-  /* /desaparece espacios en blanco del nav/ */
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 ::after,
@@ -60,19 +62,95 @@ a {
 }
 
 .btn-cerrar {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--oscuro);
+  position: absolute;
+  top: 0;
+  right: 50px;
+  user-select: none;
+}
+
+.pantalla-completa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btn-cerrar:hover {
+  cursor: pointer;
+}
+
+/*boton del banner*/
+.btn {
+  text-decoration: none;
   color: var(--blanco);
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*parte responisve del video*/
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 2.2rem;
+  }
+}
+
+#bordes {
+  border: 3px solid var(--blanco);
+}
+
+/*parte responsive del video: bordes del btn*/
+
+@media (min-width: 768px) {
+  #bordes {
+    border: 4px solid var(--blanco);
+  }
+}
+
+/*boton all products*/
+#bordes:hover {
+  color: var(--blanco);
+  background-color: #d23232;
 }
 
 /* /header/ */
 
 .contenedor-navegacion {
-  background-color: var(--oscuro);
+  background-color: #f0f0f0;
+  position: relative;
+  z-index: 5;
 }
 .contenido-navegacion {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo {
+  transform: scale(60%);
+}
+
+.logo > img {
+  transform: translateX(-50rem);
 }
 
 .logo h2 {
@@ -81,15 +159,23 @@ a {
 
 .logo h2,
 .navegacion a {
-  color: var(--blanco);
+  color: var(--oscuro);
 }
 
 .navegacion a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding: 1.5rem;
+  padding-left: 4rem;
   display: block;
   transition: color 0.3s ease-in-out;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navegacion a {
+    text-align: left;
+  }
 }
 
 .navegacion a:nth-child(even):hover {
@@ -111,14 +197,20 @@ a {
   right: 0;
   bottom: 0;
   bottom: 0;
+  height: 100vh;
   width: 41rem;
   padding: 3rem 4rem;
-  background-color: var(--oscuro);
+  background-color: #f0f0f0;
+  animation: desplazamiento 0.5s ease-in-out;
+}
+
+.hamburguesa:hover {
+  cursor: pointer;
 }
 
 .hamburguesa span {
   display: block;
-  background-color: var(--blanco);
+  background-color: var(--oscuro);
   width: 5rem;
   height: 0.5rem;
   margin-bottom: 0.5rem;
@@ -419,6 +511,15 @@ a {
 }
 
 @media (max-width: 480px) {
+  /* logo */
+  .logo {
+    transform: scale(40%);
+  }
+
+  .logo > img {
+    transform: translateX(-30rem);
+  }
+
   /*Separador*/
   .contenido-separador h2 {
     text-align: center;
@@ -473,5 +574,272 @@ a {
   }
   .formulario-contacto {
     transform: translateY(-5rem);
+  }
+}
+/* Sección Nosotros */
+
+/* Contenedor principal con flexbox */
+.contenedor-nosotros {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column; /* Para alinear los textos uno debajo del otro */
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Asegura que el contenedor ocupe todo el alto de la pantalla */
+  text-align: center;
+  position: relative; /* Para permitir el posicionamiento de los textos dentro de este contenedor */
+  padding: 0 1rem; /* Espacio adicional en los bordes para evitar desbordes */
+  gap: 2rem; /* Espacio entre el texto y el carrusel */
+}
+
+.sobre-nosotros {
+  flex-direction: column;
+}
+.subtitulo {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-size: calc(3rem + 5vw); /* Tamaño dinámico para "SOBRE NOSOTROS" */
+  color: #00000032;
+  margin-top: -6rem;
+}
+
+.texto-nosotros h1 {
+  font-family: "Roboto", serif;
+  font-weight: 800;
+  font-size: calc(3rem + 1vw); /* Tamaño dinámico para "ANBERNIC" */
+  color: var(--rojo-intenso);
+  margin: -6rem 0 0;
+}
+
+.texto {
+  font-family: "Roboto", serif;
+  font-size: 1.5rem; /* Tamaño dinámico para el texto de descripción */
+  color: #000000;
+  max-width: 80%; /* Limita el tamaño del párrafo para que no ocupe toda la pantalla */
+  margin: 2rem auto 0;
+}
+
+.carousel-item {
+  margin-top: 0rem;
+}
+.card-title {
+  font-size: 2rem; /* Aumentar tamaño del título */
+}
+
+.card-text {
+  font-size: 1.5rem; /* Aumentar tamaño del texto de la descripción */
+}
+
+.carousel-control-prev svg,
+.carousel-control-next svg {
+  fill: var(--rojo-intenso); /* Cambiar color */
+  width: 3rem; /* Tamaño de la flecha */
+  height: 3rem; /* Tamaño de la flecha */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent; /* Eliminar fondo del botón */
+}
+
+.contenedor-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+
+#carouselMultiItemExample {
+  margin-top: 2rem;
+}
+.texto-articulos {
+  text-align: center;
+  font-size: calc(2rem + 2vw);
+  color: var(--rojo-intenso);
+  font-family: "Roboto", serif;
+}
+
+.botones-categoria .btn-red {
+  background-color: var(--rojo-intenso);
+  color: rgb(255, 255, 255);
+  margin: 5rem 0 1rem 1rem;
+  display: inline-block;
+  width: 20rem;
+  font-size: 1rem;
+}
+
+.botones-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 calc(50% - 1rem);
+}
+
+.botones-categoria button {
+  flex: 0 0 calc(50% - 1rem);
+  padding: 1rem 1rem;
+  flex: unset;
+}
+
+.botones-categoria {
+  display: inline-block;
+}
+
+.articulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 12rem;
+}
+.articulo-individual img {
+  width: 100%;
+  height: auto;
+  display: block; /* Esto ayuda a evitar espacios adicionales debajo de las imágenes */
+}
+
+.articulo-individual {
+  flex: 0 0 calc(33.3% - 1rem);
+  padding: 3rem;
+  border: 1px solid #e1e1e1;
+}
+
+.articulo-individual h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.articulo-individual p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.articulo-individual .precio {
+  display: flex;
+  justify-content: space-between; /* Para alinear el precio y el botón */
+  align-items: center; /* Alinea el precio y el botón verticalmente */
+  margin-top: auto; /* Empuja el precio y botón hacia el final del contenedor */
+}
+
+.precio p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  color: #000;
+}
+
+.precio button {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--rojo-intenso);
+  color: #ffffff;
+  padding: 1rem;
+}
+
+/* Estilos iniciales para las imágenes */
+img[data-src] {
+  opacity: 0;
+  transform: translateY(20px); /* Comienza ligeramente desplazada hacia abajo */
+  transition: opacity 1s, transform 1s ease-out; /* Efecto de desvanecimiento y deslizamiento */
+}
+
+/* Cuando la imagen se ha cargado y se ha desplazado a su lugar */
+img.loaded {
+  opacity: 1;
+  transform: translateY(0); /* Desplazamiento hacia su posición original */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  /* Ajustes para subtitulo */
+  .subtitulo {
+    font-size: calc(2rem + 7vw); /* Mantener tamaño dinámico */
+    margin-top: 0; /* Evitar márgenes grandes */
+  }
+
+  /* Ajustes para título */
+  .texto-nosotros h1 {
+    font-size: calc(2rem + 2vw); /* Tamaño de fuente ajustado */
+    margin-top: -10vh; /* Ajustar el margen superior con valor dinámico */
+  }
+
+  /* Ajustes para el texto */
+  .texto {
+    font-size: calc(0.5rem + 2vw); /* Ajuste más pequeño y dinámico */
+    max-width: 90%; /* Dejar más espacio en móviles */
+    margin-bottom: 13rem;
+  }
+
+  #carouselMultiItemExample {
+    width: 30rem;
+    margin: auto;
+  }
+}
+/*video*/
+
+.contenido-header {
+  position: relative;
+}
+
+.contenido-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+/*letras del video*/
+.texto-encabezado {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-encabezado h2 {
+  color: #ee1717;
+  font-size: 8rem;
+}
+
+.texto-encabezado a {
+  color: red;
+  font-size: 2rem;
+}
+
+/*parte responsive del video*/
+@media (min-width: 768px) {
+  .texto-encabezado h2 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .texto-encabezado h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .texto-encabezado h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .texto-encabezado h2 {
+    font-size: 3.5rem;
   }
 }
