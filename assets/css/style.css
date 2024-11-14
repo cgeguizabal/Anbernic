@@ -219,7 +219,7 @@ a {
 /* Separador/Banner */
 
 .separador {
-  background-image: url("/Arbernic/assets/img/cubexx-pc.webp"); /*imagen*/
+  background-image: url("https://anbernic.com/cdn/shop/files/cubexx-pc.webp?v=1729853011&width=1600"); /*imagen*/
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
