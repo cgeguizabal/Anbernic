@@ -219,7 +219,7 @@ a {
 /* Separador/Banner */
 
 .separador {
-  background-image: url("/assets/img/cubexx-pc.webp"); /*imagen*/
+  background-image: url("../assets/img/cubexx-pc.webp"); /*imagen*/
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
