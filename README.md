@@ -1,6 +1,6 @@
 # Arbenic - Brand Website
 
-This project consists of a website designed for the *Arbenic* brand, where users can explore various sections of the store. The platform allows customers to view products, access special offers, and actively engage with the store experience through subscription buttons and an online shop.
+This **group project** project  consists of a website designed for the *Arbenic* brand, where users can explore various sections of the store. The platform allows customers to view products, access special offers, and actively engage with the store experience through subscription buttons and an online shop.
 
 ---
 #Preview
@@ -30,7 +30,7 @@ Users can browse through the different sections of the site to explore the produ
 
 # Arbenic - Página Web de Marca
 
-Este proyecto consiste en una página web diseñada para la marca *Arbenic*, en la cual los usuarios pueden explorar las diversas secciones de la tienda. La plataforma permite a los clientes visualizar los productos, acceder a ofertas y participar activamente en la experiencia de la tienda mediante botones de suscripción y una tienda en línea.
+Este **group project** proyecto consiste en una página web diseñada para la marca *Arbenic*, en la cual los usuarios pueden explorar las diversas secciones de la tienda. La plataforma permite a los clientes visualizar los productos, acceder a ofertas y participar activamente en la experiencia de la tienda mediante botones de suscripción y una tienda en línea.
 ---
 #Preview
 https://cgeguizabal.github.io/Anbernic/
